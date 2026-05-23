@@ -1,0 +1,23 @@
+services:
+- type: web
+  name: gisul-api
+  runtime: python
+  pythonVersion: 3.11
+  buildCommand: pip install -r backend-fastapi/requirements.txt
+  startCommand: cd backend-fastapi && python main.py
+  envVars:
+  - key: SQLALCHEMY_DATABASE_URL
+    value: sqlite:///./gisul.db
+    scope: run
+  - key: SECRET_KEY
+    value: your-secret-key-change-this
+    scope: run
+  - key: ALGORITHM
+    value: HS256
+    scope: run
+  - key: ACCESS_TOKEN_EXPIRE_MINUTES
+    value: "10080"
+    scope: run
+  - key: PORT
+    value: "5000"
+    scope: run
