@@ -5,5 +5,17 @@ backend/data.sqlite
 backend/.env
 frontend/.env
 frontend/build/
+api/.env
+api/__pycache__/
+api/*/__pycache__/
+api/venv/
+api/.venv/
+*.pyc
+*.pyo
+*.egg-info/
 .DS_Store
 *.log
+.env
+*.db
+*.sqlite
+.vercel/
