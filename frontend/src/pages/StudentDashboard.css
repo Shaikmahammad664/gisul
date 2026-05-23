@@ -1,0 +1,62 @@
+.dashboard-page { padding-bottom: 60px; }
+.dashboard-page .container { max-width: 900px; }
+
+.dashboard-stats {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 40px;
+}
+.stat-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 24px; text-align: center;
+}
+.stat-value {
+  font-family: 'Syne', sans-serif; font-size: 2.2rem; font-weight: 800;
+  color: var(--accent);
+}
+.stat-label { color: var(--text-muted); font-size: 13px; margin-top: 4px; }
+
+.section-title { font-size: 1.3rem; font-weight: 700; margin-bottom: 20px; }
+
+.enrolled-courses { display: flex; flex-direction: column; gap: 16px; }
+
+.enrolled-card {
+  display: flex; gap: 20px; align-items: center;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 20px;
+  transition: border-color 0.2s;
+}
+.enrolled-card:hover { border-color: rgba(108,99,255,0.3); }
+
+.enrolled-thumb {
+  width: 100px; height: 70px; flex-shrink: 0;
+  border-radius: 8px; overflow: hidden;
+}
+.enrolled-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.enrolled-thumb-placeholder {
+  width: 100%; height: 100%; background: var(--surface2);
+  display: flex; align-items: center; justify-content: center; font-size: 1.5rem;
+}
+
+.enrolled-info { flex: 1; display: flex; flex-direction: column; gap: 8px; }
+.enrolled-header { display: flex; align-items: center; gap: 12px; }
+.enrolled-header h3 { font-size: 15px; font-weight: 600; }
+.finished-badge {
+  font-size: 11px; padding: 2px 8px; border-radius: 20px;
+  background: rgba(67,232,160,0.15); color: var(--success);
+  border: 1px solid rgba(67,232,160,0.3);
+}
+.enrolled-meta { display: flex; align-items: center; gap: 10px; }
+.lesson-count { font-size: 12px; color: var(--text-muted); }
+
+.progress-row { display: flex; align-items: center; gap: 10px; }
+.progress-num { font-size: 13px; font-weight: 600; color: var(--accent); min-width: 36px; text-align: right; }
+.lessons-progress { font-size: 12px; color: var(--text-muted); }
+
+.empty-icon { font-size: 3rem; margin-bottom: 12px; }
+
+.explore-more { margin-top: 40px; }
+
+@media (max-width: 600px) {
+  .dashboard-stats { grid-template-columns: 1fr; }
+  .enrolled-card { flex-direction: column; align-items: flex-start; }
+  .enrolled-thumb { width: 100%; height: 140px; }
+}

@@ -1,0 +1,42 @@
+.course-form-page { padding-bottom: 60px; }
+
+.course-form { display: flex; flex-direction: column; gap: 32px; }
+
+.form-section {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 28px;
+}
+.form-section h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 20px; }
+
+.section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.section-header h2 { margin-bottom: 0; }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+.thumbnail-preview {
+  margin-top: 8px; border-radius: 8px; overflow: hidden;
+  aspect-ratio: 16/9; max-width: 320px;
+}
+.thumbnail-preview img { width: 100%; height: 100%; object-fit: cover; }
+
+.lesson-form-item {
+  background: var(--surface2); border: 1px solid var(--border);
+  border-radius: 10px; padding: 18px; margin-bottom: 12px;
+}
+.lesson-form-header {
+  display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;
+}
+.lesson-num { font-size: 13px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; }
+.btn-remove {
+  background: none; border: none; color: var(--text-muted);
+  cursor: pointer; font-size: 14px; padding: 4px 8px; border-radius: 4px;
+}
+.btn-remove:hover { color: var(--error); background: rgba(255,95,126,0.1); }
+
+.form-actions {
+  display: flex; gap: 12px; justify-content: flex-end; padding-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+  .form-row { grid-template-columns: 1fr; }
+}
